@@ -1,8 +1,13 @@
 alert('Boas vindas ao jogo do número secreto!!!')
 //*A função alert() em JavaScript é usada para exibir uma caixa de diálogo de alerta ao usuário. */
 
+/* Quero criar um local onde possa inserir o valor que será o máximo do
+ jogo. Para criar essa lógica, necessito de uma variável*/
+
+ let numeroMaximo = 5000;
+
 // Function para GERAR UM NÚMERO ALEATÓRIO entre  1 e 100
-let numeroSecreto = parseInt(Math.random() * 100 + 1);
+let numeroSecreto = parseInt(Math.random() * numeroMaximo + 1);
 
 console.log(numeroSecreto)
 
@@ -14,7 +19,7 @@ let tentativas = 1
 
 // ENQUANTO chute NÃO for igual ao numeroSecreto
 while (chute != numeroSecreto) {
-  chute = prompt('Escolha um número entre 1 e 100:')
+  chute = prompt(`Escolha um número entre 1 e ${numeroMaximo}:`)
   // se chute for igual ao número secreto
   if (chute == numeroSecreto) {
     break
@@ -31,7 +36,7 @@ ${chute}`)
 
 //  OPERADOR TERNÁRIO
 let palavraTentativa = tentativas > 1 ? 'tentativaas' : 'tentativa';
-alert(`Isso ai! Você ACERRTOU!!! ${numeroSecreto} é o NÚMERO SECRETO - Você precisou de       
+alert(`Parabéns! Você ACERRTOU!!! ${numeroSecreto} é o NÚMERO SECRETO - Você precisou de       
  ${tentativas} ${palavraTentativa}`)
 
 // let palavraTentativa ACIMA, SUBSTITUI o if, ABAIXO
