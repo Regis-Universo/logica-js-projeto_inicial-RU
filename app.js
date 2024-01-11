@@ -4,7 +4,7 @@ alert('Boas vindas ao jogo do número secreto!!!')
 /* Quero criar um local onde possa inserir o valor que será o máximo do
  jogo. Para criar essa lógica, necessito de uma variável*/
 
- let numeroMaximo = 5000;
+ let numeroMaximo = 50;
 
 // Function para GERAR UM NÚMERO ALEATÓRIO entre  1 e 100
 let numeroSecreto = parseInt(Math.random() * numeroMaximo + 1);
